@@ -1,3 +1,5 @@
 import type { AgendaConfig } from "agenda";
 
-export type AgendaModuleOptions = AgendaConfig;
+export interface AgendaModuleOptions extends AgendaConfig {
+    enabled: boolean;
+}
