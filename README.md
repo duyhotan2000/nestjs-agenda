@@ -6,14 +6,14 @@ I've always wanted a module similar to @nestjs/schedule & @nestjs/bull but for [
 
 ## Installation
 ```sh
-yarn add @agent-ly/nestjs-agenda agenda
+yarn add nestjs-agenda agenda
 # npm install ...
 ```
 
 ## Usage
 `app.processor.ts`
 ```ts
-import { Processor, Define, Every, Schedule } from "@agent-ly/nestjs-agenda";
+import { Processor, Define, Every, Schedule } from "nestjs-agenda";
 import { Job } from "agenda";
 
 interface ISayYourName {
@@ -43,7 +43,7 @@ export class AppProcessor {
 `app.service.ts`
 ```ts
 ...
-import { AgendaService } from "@agent-ly/nestjs-agenda";
+import { AgendaService } from "nestjs-agenda";
 @Injectable()
 export class AppService {
   constructor(
@@ -59,7 +59,7 @@ export class AppService {
 `app.module.ts`
 ```ts
 ...
-import { AgendaModule } from "@agent-ly/nestjs-agenda";
+import { AgendaModule } from "nestjs-agenda";
 import { AppProcessor } from "./app.processor";
 
 @Module({
