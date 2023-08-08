@@ -1,6 +1,6 @@
 {
   "name": "@duyhotan2000/nestjs-agenda",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "An opioninated agenda module for Nestjs",
   "repository": "https://github.com/duyhotan2000/nestjs-agenda.git",
   "license": "MIT",
