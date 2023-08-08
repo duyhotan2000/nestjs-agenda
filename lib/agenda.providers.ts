@@ -8,13 +8,13 @@ export const createAgendaServiceProvider = (): FactoryProvider => {
     provide: AgendaService,
     useFactory: async (options: AgendaModuleOptions) => {
       const logger = new Logger(createAgendaServiceProvider.name);
+      const agendaService = new AgendaService(options);
       if(options.enabled) {
-        const agendaService = new AgendaService(options);
         await agendaService.start();
-        return agendaService;
       } else {
         logger.log("Agenda disabled...")
       }
+      return agendaService;
     },
     inject: [MODULE_OPTIONS_TOKEN],
   };
